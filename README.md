@@ -1,4 +1,4 @@
 # How To Use It
 npm install
 
-node cloud-formation-scanning.js -f \<teams.csv\> -r \<region\> -k \<api-key\>
+node cloud-formation-scanning.js -p \<cloudformation.json\> -r \<region\> -k \<api-key\>

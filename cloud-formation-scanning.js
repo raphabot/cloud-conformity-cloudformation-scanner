@@ -20,7 +20,7 @@ const BASE_URL = "https://" + REGION + "-api.cloudconformity.com/v1";
 const generateRequest = (path) => {
   return {
     baseURL: BASE_URL,
-    url: '/iac-scanning/scan',
+    url: '/template-scanner/scan',
     method: 'post',
     headers: {
       'Content-Type': 'application/vnd.api+json',
@@ -41,7 +41,7 @@ const generateRequest = (path) => {
 const scan = async (path) => {
   try{
     const res = await axios(generateRequest(path));
-    return res.data;
+    return JSON.stringify(res.data, null, 2);
   }
   catch(err){
     return err.response.data;
