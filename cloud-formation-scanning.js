@@ -4,7 +4,7 @@ const fs = require('fs');
 const yargs = require("yargs");
 
 const options = yargs
- .usage("Usage: -f <teams.csv>")
+ .usage("Usage: -f <teams.csv> -r <region> -k <api-key>")
  .option("p", { alias: "path", describe: "Cloudformation file path", type: "string", demandOption: true })
  .option("r", { alias: "region", describe: "Cloud Conformity region. Defaults to us-west-2", type: "string", default: "us-west-2", demandOption: false })
  .option("k", { alias: "key", describe: "Cloud Conformity api key.", type: "string", demandOption: true })
